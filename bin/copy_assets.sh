@@ -40,12 +40,12 @@ rsync -rv assets/playground/BadUSB/* sd_card/badusb/. \
     --exclude *.md
 rsync -rv assets/badusb/Payloads/* sd_card/badusb/.
 
-# Dolphin picures?
+# Dolphin pictures?
 
-mkdir -pv sd_card/dolphin
+# mkdir -pv sd_card/dolphin
 
-rsync -rv firmware/assets/resources/dolphin/* sd_card/dolphin/.
-rsync -rv assets/playground/Graphics/manifest.txt sd_card/dolphin/.
+# rsync -rv firmware/assets/resources/dolphin/* sd_card/dolphin/.
+# rsync -rv assets/playground/Graphics/manifest.txt sd_card/dolphin/.
 
 # Infrared
 
@@ -59,12 +59,12 @@ rsync -rv assets/infrared/* sd_card/infrared/. \
 
 # Music Player
 
-mkdir -pv sd_card/music_player
+# mkdir -pv sd_card/music_player
 
-rsync -rv firmware/assets/resources/music_player/* sd_card/music_player/.
-rsync -rv assets/music_player/* sd_card/music_player/. \
-    --exclude README.md \
-    --exclude *.zip
+# rsync -rv firmware/assets/resources/music_player/* sd_card/music_player/.
+# rsync -rv assets/music_player/* sd_card/music_player/. \
+#     --exclude README.md \
+#     --exclude *.zip
 
 # NFC
 
@@ -79,12 +79,6 @@ rsync -rv assets/playground/NFC/* sd_card/nfc/. \
     --exclude HID_iClass \
     --exclude mf_classic_dict
 
-# PicoPass
-
-mkdir -pv sd_card/picopass
-
-rsync -rv assets/playground/picopass/* sd_card/picopass/. \
-    --exclude *.md
 
 # Sub-GHz
 
@@ -116,10 +110,10 @@ for bak_file in touchtunes_map.txt universal_rf_map.txt; do
     fi
 done
 
-# WAV player
+# # WAV player
 
-mkdir -pv sd_card/wav_player
+# mkdir -pv sd_card/wav_player
 
-rsync -rv firmware/assets/resources/wav_player/* sd_card/wav_player/.
-rsync -rv assets/playground/Wav_Player/* sd_card/wav_player/. \
-    --exclude *.md
+# rsync -rv firmware/assets/resources/wav_player/* sd_card/wav_player/.
+# rsync -rv assets/playground/Wav_Player/* sd_card/wav_player/. \
+#     --exclude *.md
