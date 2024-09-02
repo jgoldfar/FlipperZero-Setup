@@ -2,13 +2,15 @@
 
 set -eu
 
-FIRMWARE_DIR="$(cd `dirname $0` && pwd)/../firmware"
+REPOSITORY_ROOT_DIR="$(cd `dirname $0` && pwd)/.."
+FIRMWARE_DIR="${REPOSITORY_ROOT_DIR}/firmware"
 
 cd "$FIRMWARE_DIR"
 
-rsync -r static-firmware/ firmware/
+git submodule update --recursive --init --force
 
-FBT_NO_SYNC=y ./fbt
+rsync -r "${REPOSITORY_ROOT_DIR}/static-firmware/" firmware/
 
-echo "Firmware should be in $(realpath "FIRMWARE_DIR")/dist/"
-echo "Use qFlipper (https://flipperzero.one/update) to flash the DFU"
+FBT_NO_SYNC=y ./fbt COMPACT=1 DEBUG=0 VERBOSE=1
+
+echo "use './fbt COMPACT=1 DEBUG=0 VERBOSE=1 flash_usb' to install the firmware when the FlipperZero is connected"
