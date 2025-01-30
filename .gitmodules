@@ -1,18 +1,23 @@
 [submodule "firmware"]
 	path = firmware
 	url = https://github.com/TransitiveDependencyDownstreams/flipperzero-firmware.git
+	branch = master
 [submodule "assets/BadUSB"]
 	path = assets/badusb
 	url = https://github.com/TransitiveDependencyDownstreams/Flipper-Zero-BadUSB.git
+	branch = master
 [submodule "assets/infrared"]
 	path = assets/infrared
 	url = https://github.com/TransitiveDependencyDownstreams/Flipper-IRDB.git
+	branch = master
 [submodule "assets/nfc/amiibo"]
 	path = assets/nfc/amiibo
 	url = https://github.com/TransitiveDependencyDownstreams/FlipperAmiibo.git
+	branch = master
 [submodule "assets/playground"]
 	path = assets/playground
 	url = https://github.com/TransitiveDependencyDownstreams/FlipperZeroPlayground.git
+	branch = master
 [submodule "assets/music_player"]
 	path = assets/music_player
 	url = https://github.com/neverfa11ing/FlipperMusicRTTTL.git
